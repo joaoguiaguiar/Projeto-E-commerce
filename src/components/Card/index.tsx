@@ -66,9 +66,15 @@ const PrecoComDesconto = styled.div`
 `;
 
 const Container = styled.div`
-
 margin-right: 6rem;
+
+@media (max-width: 768px) {
+  margin-right: 10rem;
+}
+
+
 `
+
 
 const Card = ({ produtos }: { produtos: IProduto[] }) => {
   const { adicionarAoCarrinho } = useCarrinho();

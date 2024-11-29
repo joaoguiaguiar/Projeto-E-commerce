@@ -16,6 +16,12 @@ const Container = styled.div`
   justify-content: space-between !important;
   width: 100%; 
   gap: 53rem; 
+  @media (max-width: 768px) {
+ gap: 0;
+
+}
+
+
 `;
 
 
