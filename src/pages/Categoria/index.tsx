@@ -6,7 +6,7 @@ import Titulo from "../../components/Titulo";
 import categorias from "../../json/categorias.json";
 import { IProduto } from "../../interface/IProduto";
 import "./Categoria.scss";
-import CardCategoria from "./Card";
+import Card from "../../components/Card";
 import TagsCategorias from "../../components/TagsCategorias";
 
 type CategoriaKeys = keyof typeof categorias;
@@ -52,7 +52,7 @@ const Categoria = () => {
 
       <div className="lista-cards">
         {itensFiltrados.length > 0 ? (
-          <CardCategoria produtos={itensFiltrados} /> 
+          <Card produtos={itensFiltrados} /> 
         ) : (
           <p className="txtNaoEncontrado">Elemento não encontrado</p> 
         )}

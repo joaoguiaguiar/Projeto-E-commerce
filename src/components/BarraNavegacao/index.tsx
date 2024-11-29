@@ -11,18 +11,21 @@ import styled from "styled-components";
 
 import "./BarraNavegacao.scss";
 
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between !important;
-  width: 100%; 
-  gap: 53rem; 
-  @media (max-width: 768px) {
- gap: 0;
+// const Container = styled.div`
+// display: flex;
+// justify-content: space-between;
 
-}
+// @media (max-width: 1024px) {
+//     gap: 1.5rem;
+//   }
 
+//   @media (max-width: 768px) {
+//     flex-direction: row;
+//     align-items: center;
+//     gap: 1rem;
+//   }
+// `;
 
-`;
 
 
 const BarraNavegacao = () => {
@@ -61,9 +64,7 @@ const BarraNavegacao = () => {
 
   return (
     <nav className="ab-navbar">
-      <h1 className="logo"></h1>
-
-      <Container>
+      <div className="container">
         <ul className="navegacao">
           <li className="loguin">
             <BotaoNavegacao
@@ -140,9 +141,7 @@ const BarraNavegacao = () => {
             </>
           )}
         </ul>
-
-
-      </Container>
+      </div>
 
 
     </nav>
