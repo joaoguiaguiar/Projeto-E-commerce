@@ -7,7 +7,17 @@ import BotaoCarrinho from "./BotaoCarrinho";
 import ModalCarrinho from "../ModalCarrinho";
 import usuario from "../../assets/usuario.svg";
 import sacola from "./assets/Vector.png";
+import styled from "styled-components";
+
 import "./BarraNavegacao.scss";
+
+const Container = styled.div`
+  display: flex;
+  justify-content: space-between !important;
+  width: 100%; 
+  gap: 53rem; 
+`;
+
 
 const BarraNavegacao = () => {
   const [modalCadastroAberta, setModalCadastroAberta] = useState(false);
@@ -39,90 +49,96 @@ const BarraNavegacao = () => {
   };
 
   const aoAbrirModalCadastro = () => {
-    setModalLoginAberta(false);  // Fecha o modal de login
-    setModalCadastroAberta(true); // Abre o modal de cadastro
+    setModalLoginAberta(false);
+    setModalCadastroAberta(true);
   };
 
   return (
     <nav className="ab-navbar">
       <h1 className="logo"></h1>
-      <ul className="navegacao">
-        <li className="loguin">
-          <BotaoNavegacao
-            texto="Login"
-            textoAltSrc="Ícone representando um usuário"
-            imagemSrc={usuario}
-            onClick={() => setModalLoginAberta(true)}
-          />
-          <ModalLoginUsuario
-            aberta={modalLoginAberta}
-            aoFechar={() => setModalLoginAberta(false)}
-            aoEfetuarLogin={aoEfetuarLogin}
-            aoAbrirModalCadastro={aoAbrirModalCadastro} 
-          />
-        </li>
-        <li>
-          <a href="#!" className="btn_cate">Categorias</a>
-          <ul className="submenu">
-            <li><Link to="/categorias/eletronicos">Eletrônicos</Link></li>
-            <li><Link to="/categorias/informatica">Informática</Link></li>
-            <li><Link to="/categorias/cozinha">Cozinha</Link></li>
-            <li><Link to="/categorias/audio-e-video">Áudio e Vídeo</Link></li>
-            <li><Link to="/categorias/games">Games</Link></li>
-          </ul>
-        </li>
-      </ul>
 
-      <ul className="acoes">
-        {!emailUsuario ? (
-          <>
-            <li>
-              <div className="iconCadastro">
-                <BotaoNavegacao
-                  texto="Cadastrar-se"
-                  textoAltSrc="Ícone representando um usuário"
-                  imagemSrc={usuario}
-                  onClick={() => setModalCadastroAberta(true)}
-                />    
-              </div>
-         
-              <ModalCadastroUsuario
-                aberta={modalCadastroAberta}
-                aoFechar={() => setModalCadastroAberta(false)}
-              />
-            </li>
-            <li className="iconCarrinho">
-              <BotaoCarrinho
-                textoAltSrc="Ícone representando um carrinho"
-                imagemSrc={sacola}
-                onClick={() => alert("Ops! Você precisa estar logado para comprar.")}
-                qtdItens={qtdItensCarrinho}
-              />
-            </li>
-          </>
-        ) : (
-          <>
-            <li className="btnMinhaConta">
-              <Link to="/minha-conta/pedidos">Minha Conta</Link>
-            </li>
-            <li className="iconCarrinho">
-              <BotaoCarrinho
-                textoAltSrc="Ícone representando um carrinho"
-                imagemSrc={sacola}
-                onClick={() => setModalCarrinhoAberta(true)}
-                qtdItens={qtdItensCarrinho}
-              />
-              <ModalCarrinho
-                aberta={modalCarrinhoAberta}
-                aoFechar={() => setModalCarrinhoAberta(false)}
-              />
-            </li>
-            <li className="btnLogout">
-              <button onClick={aoEfetuarLogout} className="btnSair">Sair</button>
-            </li>
-          </>
-        )}
-      </ul>
+      <Container>
+        <ul className="navegacao">
+          <li className="loguin">
+            <BotaoNavegacao
+              texto="Login"
+              textoAltSrc="Ícone representando um usuário"
+              imagemSrc={usuario}
+              onClick={() => setModalLoginAberta(true)}
+            />
+            <ModalLoginUsuario
+              aberta={modalLoginAberta}
+              aoFechar={() => setModalLoginAberta(false)}
+              aoEfetuarLogin={aoEfetuarLogin}
+              aoAbrirModalCadastro={aoAbrirModalCadastro}
+            />
+          </li>
+          <li>
+            <a href="#!" className="btn_cate">Categorias</a>
+            <ul className="submenu">
+              <li><Link to="/categorias/eletronicos">Eletrônicos</Link></li>
+              <li><Link to="/categorias/informatica">Informática</Link></li>
+              <li><Link to="/categorias/cozinha">Cozinha</Link></li>
+              <li><Link to="/categorias/audio-e-video">Áudio e Vídeo</Link></li>
+              <li><Link to="/categorias/games">Games</Link></li>
+            </ul>
+          </li>
+        </ul>
+        <ul className="acoes">
+          {!emailUsuario ? (
+            <>
+              <li>
+                <div className="iconCadastro">
+                  <BotaoNavegacao
+                    texto="Cadastrar-se"
+                    textoAltSrc="Ícone representando um usuário"
+                    imagemSrc={usuario}
+                    onClick={() => setModalCadastroAberta(true)}
+                  />
+                </div>
+
+                <ModalCadastroUsuario
+                  aberta={modalCadastroAberta}
+                  aoFechar={() => setModalCadastroAberta(false)}
+                />
+              </li>
+              <li className="iconCarrinho">
+                <BotaoCarrinho
+                  textoAltSrc="Ícone representando um carrinho"
+                  imagemSrc={sacola}
+                  onClick={() => alert("Ops! Você precisa estar logado para comprar.")}
+                  qtdItens={qtdItensCarrinho}
+                />
+              </li>
+            </>
+          ) : (
+            <>
+              <li className="btnMinhaConta">
+                <Link to="/minha-conta/pedidos">Minha Conta</Link>
+              </li>
+              <li className="iconCarrinho">
+                <BotaoCarrinho
+                  textoAltSrc="Ícone representando um carrinho"
+                  imagemSrc={sacola}
+                  onClick={() => setModalCarrinhoAberta(true)}
+                  qtdItens={qtdItensCarrinho}
+                />
+                <ModalCarrinho
+                  aberta={modalCarrinhoAberta}
+                  aoFechar={() => setModalCarrinhoAberta(false)}
+                />
+              </li>
+              <li className="btnLogout">
+                <button onClick={aoEfetuarLogout} className="btnSair">Sair</button>
+              </li>
+            </>
+          )}
+        </ul>
+
+
+      </Container>
+
+
     </nav>
   );
 };

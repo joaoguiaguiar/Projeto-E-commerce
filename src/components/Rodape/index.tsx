@@ -13,7 +13,7 @@ import hipercard from '../../assets/pagamento/payment-hipercard.png';
 const Rodape = () => {
     return (
         <footer className="rodape">
-            <h2 className="rodape__titulo">Loja Fashion</h2>
+            <h2 className="rodape__titulo">Ecomerce-Hub</h2>
 
 
         
