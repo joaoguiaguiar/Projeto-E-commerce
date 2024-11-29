@@ -1,0 +1,25 @@
+.btn_form{
+    padding: 1em 2em;
+    background-color: #EB9B00
+
+}
+
+
+
+
+.corpoModalCadastro {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    gap: 5rem;
+}
+
+.corpoModalCadastro form {
+    width: 500px;
+    max-width: 100%;
+}
+
+.corpoModalCadastro form .acoes {
+    margin-top: 48px;
+    text-align: center;
+}

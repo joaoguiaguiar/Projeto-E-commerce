@@ -1,0 +1,69 @@
+.corpoModalCadastro {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    flex-direction: row;
+}
+
+.corpoModalCadastro form {
+    width: 500px;
+    max-width: 100%;
+}
+
+.corpoModalCadastro form .acoes {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.ab-modal {
+    max-width: 600px; 
+    height: 500px !important;
+    width: 90%; 
+    margin: auto;    
+}
+
+
+
+.acoes{
+    display: flex;
+    justify-content: center !important;
+}
+
+.linha{
+    margin-top: 1rem;
+}
+
+.btn__Loguin{
+    padding: 0.1em 2em;
+    border: none;
+    background-color: #EB9B00;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .corpoModalCadastro {
+        flex-direction: column !important; 
+        justify-content: center; 
+        width: 190px;
+    }
+
+    form{
+        width: 100% !important;
+    }
+
+    .corpoModalCadastro form {
+        width: 100%; 
+    }
+
+    
+    .corpoModalCadastro img {
+        width: 100%; 
+        height: auto; 
+    }
+
+
+    .acoes{
+        display: flex;
+        justify-content: center;
+    }
+}
