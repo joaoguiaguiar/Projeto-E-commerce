@@ -69,7 +69,7 @@ const Container = styled.div`
 margin-right: 6rem;
 
 @media (max-width: 768px) {
-  margin-right: 10rem;
+  margin-right: 11rem;
 }
 
 

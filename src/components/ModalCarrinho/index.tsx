@@ -117,9 +117,9 @@ const ModalCarrinho = ({ aberta, aoFechar }: ModalCarrinhoProps) => {
               <p>R$ {total.toFixed(2)}</p>
             </ContainerP>
             <ContainerBotao>
-              <Button variant="primary" onClick={handleCheckout}>
+              <button className="btnCarrinho" onClick={handleCheckout}>
                 Ir para o checkout
-              </Button>
+              </button>
             </ContainerBotao>
           </div>
         )}
