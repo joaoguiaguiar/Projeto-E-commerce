@@ -39,8 +39,8 @@ const BarraNavegacao = () => {
   };
 
   const aoAbrirModalCadastro = () => {
-    setModalLoginAberta(false);  // Fecha o modal de login
-    setModalCadastroAberta(true); // Abre o modal de cadastro
+    setModalLoginAberta(false); 
+    setModalCadastroAberta(true); 
   };
 
   return (
