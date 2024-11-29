@@ -9,15 +9,17 @@ Além disso, utilizei o React Router DOM para o gerenciamento das rotas e o Styl
 Em breve, meu foco será integrar uma API para armazenar dados de forma persistente e continuar expandindo a funcionalidade do site.
 
 Tecnologias Utilizadas
-	•	React
-	•	TypeScript
-	•	Styled Components
-	•	SCSS
-	•	React Router DOM
-	•	Bootstrap
-	•	Recoil e Context API
-	•	Local Storage (para autenticação e dados locais)
-	•	API (para futuras integrações com o banco de dados)
+	
+
+- React
+- TypeScript
+- Styled Components
+- SCSS
+- React Router DOM
+- Bootstrap
+- Recoil e Context API
+- Local Storage (para autenticação e dados locais)
+- API (para futuras integrações com o banco de dados)
 
 Link do projeto :
 
