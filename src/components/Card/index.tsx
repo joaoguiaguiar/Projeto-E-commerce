@@ -121,7 +121,8 @@ const Card = ({ produtos }: { produtos: IProduto[] }) => {
             <ContainerBotoes>
               <button onClick={() => adicionarAoCarrinho(produto)} className="botaoCard">Comprar</button>
               <div onClick={() => alternarFavorito(produto.id)}>
-                <i className={isFavorito ? "bi bi-heart-fill" : "bi bi-heart"}></i>
+                <i className={isFavorito ? "bi bi-heart-fill" : "bi bi-heart"}   style={{ cursor: "pointer" }}
+                ></i>
               </div>
             </ContainerBotoes>
           </CardEstilizado>
