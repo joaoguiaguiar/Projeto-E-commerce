@@ -18,4 +18,4 @@ Tecnologias Utilizadas
 
 Link do projeto :
 
-https://ecomerce-three-taupe.vercel.app/# Projeto-E-commerce
+https://ecomerce-three-taupe.vercel.app/
