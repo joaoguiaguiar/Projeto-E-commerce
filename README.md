@@ -10,7 +10,8 @@ Tecnologias Utilizadas
 
 - React - TypeScript
 - Styled Components
-- SCSS - React Router DOM
+- SCSS
+- React Router DOM
 - Bootstrap - Recoil e Context API
 - Local Storage (para autenticação e dados locais)
 - API (para futuras integrações com o banco de dados)
