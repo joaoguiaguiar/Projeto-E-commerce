@@ -18,4 +18,4 @@ Tecnologias Utilizadas
 
 Link do projeto :
 
-https://ecomerce-three-taupe.vercel.app/
+https://ecomerce-delta-seven.vercel.app/
