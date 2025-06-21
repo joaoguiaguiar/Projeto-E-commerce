@@ -1,4 +1,4 @@
-Sobre 
+# Sobre 
 
 Este projeto é inspirado em um e-commerce que estou desenvolvendo como parte do meu aprendizado contínuo. A ideia é continuar aprimorando esse projeto, integrando um banco de dados e adicionando novas funcionalidades no futuro. O projeto conta com funcionalidades essenciais para um e-commerce, como autenticação de usuário, carrinho de compras, barra de navegação e um sistema CRUD.
 
